@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 function Ticket(props){
   return (
-    <div>
+    <div className='container'>
       <style jsx>{`
         .color-toggle {
           background-color: cyan;
