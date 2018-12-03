@@ -29,7 +29,7 @@ class NewTicketControl extends React.Component {
         <style jsx>
           {`
       div{
-          color: white;
+          color: black;
       }
       `}
         </style>
