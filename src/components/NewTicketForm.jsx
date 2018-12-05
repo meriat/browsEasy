@@ -1,15 +1,28 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Moment from 'moment';
+import { connect } from 'react-redux';
+import { v4 } from 'uuid';
+import c from './../constants';
 
 function NewTicketForm(props) {
+  console.log(props);
   let _names = null;
   let _location = null;
   let _issue = null;
 
   function handleNewTicketFormSubmission(event) {
     event.preventDefault();
-    props.onNewTicketCreation({names: _names.value, location: _location.value, issue: _issue.value, timeOpen: new Moment()});
+    const { dispatch } = props;
+    const action = {
+      type: c.ADD_TICKET,
+      id: v4(),
+      names: _names.value,
+      location: _location.value,
+      issue: _issue.value,
+      timeOpen: new Moment(),
+      formattedWaitTime: new Moment().fromNow(true)
+    };
+    dispatch(action);
     _names.value = '';
     _location.value = '';
     _issue.value = '';
@@ -35,8 +48,4 @@ function NewTicketForm(props) {
   );
 }
 
-NewTicketForm.propTypes = {
-  onNewTicketCreation: PropTypes.func
-};
-
-export default NewTicketForm;
+export default connect()(NewTicketForm);
