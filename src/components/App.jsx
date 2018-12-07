@@ -14,7 +14,6 @@ function App() {
       <Switch>
         {/* <Route component={Error404} /> */}
       </Switch>
-      <hr />
     </div>
   );
 }
