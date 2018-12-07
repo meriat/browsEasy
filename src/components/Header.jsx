@@ -25,16 +25,16 @@ function Header(){
       `} </style>
       <div className='row'>
         <div className='col-md-3'>
-        <Link className='home' to='/'><h3>BrowsEasy</h3></Link>
+          <Link className='home' to='/'><h3>BrowsEasy</h3></Link>
         </div>
         <div className='col-md-5'>
-        <h3>Welcome, username</h3>
+          <h3>Welcome, username</h3>
         </div>
         <div className='col-md-2'>
-        <Link to='/profile' className='profile'><h4>Profile</h4></Link>
+          <Link to='/profile' className='profile'><h4>Profile</h4></Link>
         </div>
         <div className='col-md-2'>
-        <Link className='btn'  to='/'><h4>Log-Out</h4></Link>
+          <Link className='btn'  to='/'><h4>Log-Out</h4></Link>
         </div>
       </div>
     </div>

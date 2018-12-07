@@ -1,6 +1,7 @@
 import React from 'react';
 import Product from './Product';
 import PropTypes from 'prop-types';
+import Header from './Header';
 
 var masterProductList= [
   {
@@ -24,14 +25,19 @@ var masterProductList= [
 ];
 
 
-function ProductList(props) {
+function ProductList() {
   return (
-    <div className='container'>
-      <style jsx>
-        {`
-
-    `}
-      </style>
+    <div>
+      <Header />
+      {/* <div className='container'>
+        {masterProductList.map((product,index) =>
+          <Product image={product.image}
+            brand={product.brand}
+            price={product.price}
+            size={product.size}
+            key={index} />
+        )}
+      </div> */}
     </div>
   );
 }
