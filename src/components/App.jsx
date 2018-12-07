@@ -1,7 +1,6 @@
 import React from 'react';
 import { Switch, Route, withRouter } from 'react-router-dom';
 import Error404 from './Error404';
-import Admin from './Admin';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import c from './../constants';
