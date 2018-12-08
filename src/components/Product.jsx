@@ -3,14 +3,16 @@ import PropTypes from 'prop-types';
 
 function Product(props) {
     return(
-        <div className="card" style="width: 18rem;">
-          <img className="card-img-top" src="{props.image}" alt="Card image cap" />
-          <div className="card-body">
-            <p className="card-text">Brand: {props.brand}</p>
-            <p className="card-text">Price: {props.price}</p>
-            <p className="card-text">Size: {props.size}</p>
-            <a href="#" className="btn btn-primary">Go somewhere</a>
-          </div>
+        <div className='conatiner'>
+            <div className="card" style="width: 18rem;">
+            <img className="card-img-top" src="{props.image}" alt="Card image cap" />
+            <div className="card-body">
+                <p className="card-text">Brand: {props.brand}</p>
+                <p className="card-text">Price: {props.price}</p>
+                <p className="card-text">Size: {props.size}</p>
+                <a href="#" className="btn btn-primary">Go somewhere</a>
+            </div>
+            </div>
         </div>
       );
     }
