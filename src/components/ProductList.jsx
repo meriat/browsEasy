@@ -1,6 +1,5 @@
 import React from 'react';
 import Product from './Product';
-import PropTypes from 'prop-types';
 import Header from './Header';
 
 var masterProductList= [
@@ -21,6 +20,18 @@ var masterProductList= [
     brand: 'Guess',
     price: '$148',
     size: 'S, M, L'
+  },
+  {
+    image: 'http://static.zara.net/photos///2018/I/0/1/p/1639/182/601/2/w/1920/1639182601_1_1_1.jpg?ts=1542966859522',
+    brand: 'Zara',
+    price: '$49.90',
+    size: 'S'
+  },
+  {
+    image: 'https://slimages.macysassets.com/is/image/MCY/products/3/optimized/11112233_fpx.tif?op_sharpen=1&wid=500&hei=613&fit=fit,1&$filtersm$',
+    brand: 'Guess',
+    price: '$148',
+    size: 'S, M, L'
   }
 ];
 
@@ -28,8 +39,10 @@ var masterProductList= [
 function ProductList() {
   return (
     <div>
-      <Header />
-      {/* <div className='container'>
+
+    <Header/>
+      <div className='container'>
+      <div className='row'>
         {masterProductList.map((product,index) =>
           <Product image={product.image}
             brand={product.brand}
@@ -37,13 +50,15 @@ function ProductList() {
             size={product.size}
             key={index} />
         )}
-      </div> */}
+      </div>
+      </div>
+            
     </div>
   );
 }
 
-ProductList.propTypes = {
-  productList: PropTypes.array,
-};
+// ProductList.propTypes = {
+//   productList: PropTypes.array,
+// };
 
 export default ProductList;
