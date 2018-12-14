@@ -40,17 +40,17 @@ function ProductList() {
   return (
     <div>
 
-    <Header/>
+      <Header/>
       <div className='container'>
-      <div className='row'>
-        {masterProductList.map((product,index) =>
-          <Product image={product.image}
-            brand={product.brand}
-            price={product.price}
-            size={product.size}
-            key={index} />
-        )}
-      </div>
+        <div className='row'>
+          {masterProductList.map((product,index) =>
+            <Product image={product.image}
+              brand={product.brand}
+              price={product.price}
+              size={product.size}
+              key={index} />
+          )}
+        </div>
       </div>
             
     </div>

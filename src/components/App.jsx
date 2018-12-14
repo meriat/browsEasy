@@ -1,6 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-// import Error404 from './Error404';
+import Error404 from './Error404';
 import ProductList from './ProductList';
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
         `}
       </style>
       <Switch>
-        {/* <Route component={Error404} /> */}
         <Route  exact path='/' component={ProductList} />
+        <Route component={Error404} />
       </Switch>
     </div>
   );
