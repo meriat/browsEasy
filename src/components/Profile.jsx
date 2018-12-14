@@ -3,16 +3,17 @@ import React from 'react';
 function Profile() {
   return (
     <div>
-      <style jsx> {`
+      <style global jsx> {`
       body {
-      background-image: url('https://images.pexels.com/photos/947795/pexels-photo-947795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+      background-image: url('https://images.unsplash.com/photo-1431263154979-0982327fccbb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1500&q=80');
       background-repeat: no-repeat;
       background-attachment: fixed;
       background-size: cover;
       background-color: pink;
       }
-      h1{
+      .jumbotron{
           text-align: center;   
+          background: transparent;
       }
         `}
       </style>
@@ -20,18 +21,10 @@ function Profile() {
     <div className='container'>
         <form>
           <label>Your name</label>
-          <input
-            type='text'
-            id='names'
-            className='form-control'
-            placeholder='Your name'/><br />
+          <input type='text' id='names' className='form-control' placeholder='Your name'/><br />
 
           <label>Give your Size</label>
-          <input
-            type='text'
-            id='size'
-            className='form-control'
-            placeholder='Size - S,M,L,XL'/><br/>
+          <input type='text' id='size' className='form-control' placeholder='Size - S,M,L,XL'/><br/>
           <button className='btn btn-primary' type='submit'>Done!</button>
         </form>
       </div>
@@ -41,3 +34,4 @@ function Profile() {
 
 export default Profile;
 
+// https://images.unsplash.com/photo-1494280257169-55829fedd76e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 function SplashPage() {
   return (
     <div>
-      <style jsx> {`
+      <style global jsx> {`
         body{
         background-image: url('https://images.pexels.com/photos/947795/pexels-photo-947795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
         background-repeat: no-repeat;
