@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom';
 import Error404 from './Error404';
 import ProductList from './ProductList';
 import SplashPage from './SplashPage';
+import Profile from './Profile';
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         `}
       </style>
       <Switch>
-        <Route exact path='/user' component={ProductList} />
-        <Route path='/' component={SplashPage} />
+        <Route path='/user' component={ProductList} />
+        <Route exact path='/' component={SplashPage} />
+        <Route path='/profile' component={Profile} />
         <Route component={Error404} />
       </Switch>
     </div>

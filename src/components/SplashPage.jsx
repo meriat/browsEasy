@@ -4,14 +4,14 @@ import {Link} from 'react-router-dom';
 function SplashPage() {
   return (
     <div>
-      <style global jsx> {`
-          body{
-            background-image: url('https://images.pexels.com/photos/947795/pexels-photo-947795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            font-family: 'Fira Mono', monospace;
-          }
+      <style jsx> {`
+        body{
+        background-image: url('https://images.pexels.com/photos/947795/pexels-photo-947795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Fira Mono', monospace;
+        }
         h2{
             background-color: rgba(0,0,0,0.6);
             box-shadow: 8px 0 50px 5px white;
