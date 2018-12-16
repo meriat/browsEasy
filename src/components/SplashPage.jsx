@@ -6,7 +6,8 @@ function SplashPage() {
     <div>
       <style global jsx> {`
         body{
-        background-image: url('https://images.pexels.com/photos/947795/pexels-photo-947795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+        background-image: url('https://images.unsplash.com/photo-1531948240083-6a7582ab0c93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80
+        ');
         background-repeat: no-repeat;
         background-attachment: fixed;
         background-size: cover;
@@ -34,3 +35,4 @@ function SplashPage() {
 
 export default SplashPage;
 // https://images.unsplash.com/photo-1518314144686-36a36d62a13c?ixlib=rb-1.2.1&auto=format&fit=crop&w=2100&q=80
+// https://images.pexels.com/photos/947795/pexels-photo-947795.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260

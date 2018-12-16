@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from './Header';
 
 function Profile() {
   return (
@@ -13,11 +14,17 @@ function Profile() {
       }
       .jumbotron{
           text-align: center;   
-          background: transparent;
+        //   background: transparent;
+          height: 50px;
+      }
+      Header{
+          margin-top: 0px;
+          margin-bottom: 100px;
       }
         `}
       </style>
       <h1 className='jumbotron'>Give us your Info</h1>
+      <Header/>
     <div className='container'>
         <form>
           <label>Your name</label>

@@ -39,7 +39,19 @@ var masterProductList= [
 function ProductList() {
   return (
     <div>
-
+    <style global jsx>
+    {`
+    body{
+      background-image: url('  https://i1.wp.com/www.zoewithlove.me/wp-content/uploads/2017/07/yellow-pink-2.jpg?fit=2134%2C2134');
+      background-color: #FFB9B7;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      font-family: 'Fira Mono', monospace;
+      }
+    
+    `}
+    </style>
       <Header/>
       <div className='container'>
         <div className='row'>
@@ -62,3 +74,6 @@ function ProductList() {
 // };
 
 export default ProductList;
+
+// https://images.unsplash.com/photo-1531948240083-6a7582ab0c93?ixlib=rb-1.2.1&auto=format&fit=crop&w=1334&q=80
+// https://images.pexels.com/photos/1037994/pexels-photo-1037994.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260
