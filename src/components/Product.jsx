@@ -21,7 +21,7 @@ function Product(props) {
             <p className="card-text">Brand: {props.brand}</p>
             <p className="card-text">Price: {props.price}</p>
             <p className="card-text">Size: {props.size}</p>
-            <a href="#" className="btn btn-primary">See more details</a>
+            <a href="#" className="btn btn-primary">See details</a>
           </div>
 
         </div>
