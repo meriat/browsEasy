@@ -25,7 +25,7 @@ function Profile() {
       </style>
       <h1 className='jumbotron'>Give us your Info</h1>
       <Header/>
-    <div className='container'>
+      <div className='container'>
         <form>
           <label>Your name</label>
           <input type='text' id='names' className='form-control' placeholder='Your name'/><br />
