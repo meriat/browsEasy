@@ -14,7 +14,7 @@ function Profile() {
       }
       .jumbotron{
           text-align: center;   
-        //   background: transparent;
+          background: transparent;
           height: 50px;
       }
       Header{

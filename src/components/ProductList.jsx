@@ -49,6 +49,11 @@ function ProductList() {
       background-size: cover;
       font-family: 'Fira Mono', monospace;
       }
+      .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     
     `}
     </style>
