@@ -39,8 +39,8 @@ var masterProductList= [
 function ProductList() {
   return (
     <div>
-    <style global jsx>
-    {`
+      <style global jsx>
+        {`
     body{
       background-image: url('  https://i1.wp.com/www.zoewithlove.me/wp-content/uploads/2017/07/yellow-pink-2.jpg?fit=2134%2C2134');
       background-color: #FFB9B7;
@@ -51,7 +51,7 @@ function ProductList() {
       }
     
     `}
-    </style>
+      </style>
       <Header/>
       <div className='container'>
         <div className='row'>
