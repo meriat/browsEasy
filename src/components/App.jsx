@@ -13,26 +13,13 @@ class App extends React.Component {
       products : []
     };
     this.handleDisplay = this.handleDisplay.bind(this);
-    this.handleNav = this.handleNav.bind(this);
+    // this.handleNav = this.handleNav.bind(this);
   }
-
 
   handleDisplay() {
     let sizes = 'S';
     return this.state.products.filter(ele => ele.size.includes(sizes));
   }
-
-  handleNav() {
-    console.log('on my function');
-    var x = document.getElementById('navDemo');
-    if (x.className.indexOf('w3-show') == -1) {
-      x.className += ' w3-show';
-    } else { 
-      x.className = x.className.replace(' w3-show', '');
-    }
-
-  }
-  
 
   componentDidMount(){
     axios
@@ -51,7 +38,7 @@ class App extends React.Component {
         `}
         </style>
         <Switch>
-          <Route path='/user' render={() =><ProductList onHandleNav={this.handleNav} productList={this.handleDisplay()} />} />
+          <Route path='/user' render={() =><ProductList productList={this.handleDisplay()} />} />
           <Route exact path='/' component={SplashPage} />
           <Route path='/profile' component={Profile} />
           <Route component={Error404} />
@@ -63,3 +50,14 @@ class App extends React.Component {
 
 export default App;
 
+
+  // handleNav() {
+  //   console.log('on my function');
+  //   var x = document.getElementById('navDemo');
+  //   if (x.className.indexOf('w3-show') == -1) {
+  //     x.className += ' w3-show';
+  //   } else { 
+  //     x.className = x.className.replace(' w3-show', '');
+  //   }
+
+  // }

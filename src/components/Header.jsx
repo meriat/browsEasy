@@ -12,15 +12,7 @@ function Header(){
       .row {
         background-color: black;
       }
-      .col-md-3{
-        text-align: center;
-        margin-top: 8px;
-      }
-      .col-md-5{
-          text-align: center;
-          margin-top: 8px;
-      }
-      .col-md-2{
+      .col-3{
         text-align: center;
         margin-top: 8px;
       }
@@ -29,22 +21,34 @@ function Header(){
         h3,h4{
           font-size: small;
         }
-        .col-md-3{
-          text-align: center;
-          margin-top: 8px;
-        }
-        .col-md-5{
-            text-align: center;
-            margin-top: 8px;
-        }
-        .col-md-2{
-          text-align: center;
-          margin-top: 8px;
-        }
+
         }
 
       `} </style>
       
+      <div className='row'>
+        <div className='col-3'>
+          <Link to='user'><h3>BrowsEasy</h3></Link>
+        </div>
+        <div className='col-3'>
+          <h3>username!</h3>
+        </div>
+        <div className='col-3'>
+          <Link to='profile'><h3>Profile</h3></Link>
+        </div>
+        <div className='col-3'>
+          <Link className='btn'  to='/'><h4>Log-Out</h4></Link>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+Header.propTypes = {
+  onHandleNav: PropTypes.func
+};
+
+export default Header;
 
 
       {/* <div className="w3-top">
@@ -64,27 +68,3 @@ function Header(){
           <Link to="#" className="w3-bar-item w3-button w3-padding-large">Link 4</Link>
         </div>
       </div> */}
-
-      <div className='row'>
-        <div className='col-md-3'>
-          <Link to='user'><h3>BrowsEasy</h3></Link>
-        </div>
-        <div className='col-md-5'>
-          <h3>Welcome, username</h3>
-        </div>
-        <div className='col-md-2'>
-          <Link to='profile'><h3>Profile</h3></Link>
-        </div>
-        <div className='col-md-2'>
-          <Link className='btn'  to='/'><h4>Log-Out</h4></Link>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-Header.propTypes = {
-  onHandleNav: PropTypes.func
-};
-
-export default Header;

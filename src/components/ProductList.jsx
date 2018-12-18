@@ -21,6 +21,16 @@ function ProductList(props) {
         align-items: center;
         justify-content: center;
       }
+
+      @media screen and (max-width: 800px){
+        background-image: url('  https://i1.wp.com/www.zoewithlove.me/wp-content/uploads/2017/07/yellow-pink-2.jpg?fit=2134%2C2134');
+        background-color: #FFB9B7;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        font-family: 'Fira Mono', monospace;
+        }
+      }
     
     `}
       </style>
