@@ -1,5 +1,6 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+import axios from 'axios';
 import Error404 from './Error404';
 import ProductList from './ProductList';
 import SplashPage from './SplashPage';
@@ -9,39 +10,7 @@ class App extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      
-      //  masterProductList : [
-      //   {
-      //     image: 'http://static.zara.net/photos///2018/I/0/1/p/1639/182/601/2/w/1920/1639182601_1_1_1.jpg?ts=1542966859522',
-      //     brand: 'Zara',
-      //     price: '$49.90',
-      //     size: ['S']
-      //   },
-      //   {
-      //     image: 'https://slimages.macysassets.com/is/image/MCY/products/2/optimized/11154392_fpx.tif?op_sharpen=1&wid=500&hei=613&fit=fit,1&$filtersm$',
-      //     brand: 'Kiria',
-      //     price: '$44.50',
-      //     size: ['S']
-      //   },
-      //   {
-      //     image: 'https://slimages.macysassets.com/is/image/MCY/products/3/optimized/11112233_fpx.tif?op_sharpen=1&wid=500&hei=613&fit=fit,1&$filtersm$',
-      //     brand: 'Guess',
-      //     price: '$148',
-      //     size:  ['M']
-      //   },
-      //   {
-      //     image: 'http://static.zara.net/photos///2018/I/0/1/p/1639/182/601/2/w/1920/1639182601_1_1_1.jpg?ts=1542966859522',
-      //     brand: 'Zara',
-      //     price: '$49.90',
-      //     size: ['S']
-      //   },
-      //   {
-      //     image: 'https://slimages.macysassets.com/is/image/MCY/products/3/optimized/11112233_fpx.tif?op_sharpen=1&wid=500&hei=613&fit=fit,1&$filtersm$',
-      //     brand: 'Guess',
-      //     price: '$148',
-      //     size: ['S','L']
-      //   }
-      // ]
+     products : []
     };
     this.handleDisplay = this.handleDisplay.bind(this);
     this.myFunction = this.myFunction.bind(this);
@@ -50,7 +19,7 @@ class App extends React.Component {
 
   handleDisplay() {
   let sizes = 'L';
-  return this.state.masterProductList.filter(ele => ele.size.includes(sizes));
+  return this.state.products.filter(ele => ele.size.includes(sizes));
   }
 
     myFunction() {
@@ -68,6 +37,31 @@ class App extends React.Component {
       x.className = "topnav";
     }
   }
+
+  componentDidMount(){
+    // let getDataPromise = new Promise((resolve, reject) => {
+    //   let httpRequest = new XMLHttpRequest();
+    //   httpRequest.open("GET", "http://localhost:5000/api/v1/masterProductList", true);
+    //   httpRequest.onload = () => {
+    //     let master_data = JSON.parse(httpRequest.responseText);
+    //     resolve(master_data.masterProductList);
+    //   };
+    //   httpRequest.onerror = () => {
+    //     reject(httpRequest.statusText);
+    //   }
+    //   httpRequest.send();
+    // });
+    // getDataPromise.then(data => {
+    //   this.setState({products: data});
+    // });
+    axios
+      .get("http://localhost:5000/api/v1/masterProductList")
+      .then(response => { 
+          this.setState({products: response.data.masterProductList});      
+           console.log(response.data.masterProductList);  
+      });
+  }
+  //productList={this.handleDisplay()}
 
   render(){
   return (
