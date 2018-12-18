@@ -24,7 +24,7 @@ function ProductList(props) {
     
     `}
       </style>
-      <Header onMyFunction={props.onMyFunction}/>
+      <Header onHandleNav={props.onHandleNav}/>
       <div className='container'>
         <div className='row'>
           {props.productList.map((product,index) =>
@@ -43,6 +43,7 @@ function ProductList(props) {
 
 ProductList.propTypes = {
   productList: PropTypes.array,
+  onHandleNav: PropTypes.func,
 };
 
 export default ProductList;

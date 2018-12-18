@@ -1,5 +1,4 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 function Header(props){
@@ -90,10 +89,10 @@ function Header(props){
         <a href="#news">News</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
-        <a href="javascript:void(0);" className="icon" onClick={props.onMyFunction}>
+        <a href="javascript:void(0);" className="icon" onClick={props.onHandleNav}>
           <i className="fa fa-bars"></i></a>
         {/* <div id="dropdown">Dropdown menu</div> */}
-    </div>
+      </div>
       {/* <div className='row'>
         <div className='col-md-3'>
           <Link to='user'><h3>BrowsEasy</h3></Link>
@@ -113,7 +112,7 @@ function Header(props){
 }
 
 Header.propTypes = {
-  onMyFunction: PropTypes.func
-}
+  onHandleNav: PropTypes.func
+};
 
 export default Header;
