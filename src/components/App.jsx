@@ -13,7 +13,7 @@ class App extends React.Component {
       products : []
     };
     this.handleDisplay = this.handleDisplay.bind(this);
-    this.myFunction = this.myFunction.bind(this);
+    this.handleNav = this.handleNav.bind(this);
   }
 
 

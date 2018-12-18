@@ -33,7 +33,7 @@ Product.propTypes = {
   image: PropTypes.string,
   brand: PropTypes.string,
   price: PropTypes.string,
-  size: PropTypes.string,
+  size: PropTypes.array,
 };
 
 export default Product;
